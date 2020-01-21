@@ -87,7 +87,7 @@ hapFreq <- fastaIN_v1 %>%
   select(haplotypes, freq_perc, freq) %>%
   arrange(desc(freq)) %>%
   rename(Haplotypes = haplotypes,
-         "n (Freq)" = freq_perc,
+         "n [Freq]" = freq_perc,
          Freq = freq)
 
 #write data
