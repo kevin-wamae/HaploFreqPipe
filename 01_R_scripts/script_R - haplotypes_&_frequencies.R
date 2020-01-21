@@ -83,11 +83,11 @@ hapFreq <- fastaIN_v1 %>%
   dplyr::summarize(n=n()) %>%
   mutate(freq = (n / sum(n)*100)) %>%
   mutate(freq = round(freq,2)) %>%
-  mutate(freq_perc = paste(n, " [",freq,"]", sep = "")) %>%
+  mutate(freq_perc = paste(freq, " [",n,"]", sep = "")) %>%
   select(haplotypes, freq_perc, freq) %>%
   arrange(desc(freq)) %>%
   rename(Haplotypes = haplotypes,
-         "n [Freq]" = freq_perc,
+         "Freq [n]" = freq_perc,
          Freq = freq)
 
 #write data
