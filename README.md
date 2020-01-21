@@ -6,7 +6,7 @@ a frequency table of all haplotypes.
 
 Below is the expected output:
 
-| Haplotypes                   | n (Freq)   | Freq  |
+| Haplotypes                   | n [Freq]   | Freq  |
 |------------------------------|------------|-------|
 | NAHQVVSRPSKNYENNANESREMPGVAQ | 30 [28.85] | 28.85 |
 | NAHQVVSRPSKNYENNANESREMPGVAE | 13 [12.5]  | 12.5  |
