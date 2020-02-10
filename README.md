@@ -1,4 +1,4 @@
-# R-Toolkit_haplotypeFreq
+# R-Toolkit_FreqHaplotype
 An R pipeline for generating haplotype frequencies from amino acid sequence alignments
 
 The script takes as input an amino acide sequence alignment in Phylip format and generates 
