@@ -80,11 +80,11 @@ fastaIN_v1 <- fastaIN_v1[complete.cases(fastaIN_v1), ]
 hapFreq <- fastaIN_v1 %>% 
   unite("haplotypes", 2:dim(fastaIN_v1)[2], sep = "", remove = TRUE) %>% #merge residues into a string of haplotypes
   group_by(haplotypes) %>%
-  dplyr::summarize(n=n()) %>%
+  dplyr::summarize(V0, n=n()) %>%
   mutate(freq = (n / sum(n)*100)) %>%
   mutate(freq = round(freq,2)) %>%
   mutate(freq_perc = paste(freq, " [",n,"]", sep = "")) %>%
-  select(haplotypes, freq_perc, freq) %>%
+  select(V0, haplotypes, freq_perc, freq) %>%
   arrange(desc(freq)) %>%
   rename(Haplotypes = haplotypes,
          "Freq [n]" = freq_perc,
